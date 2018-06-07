@@ -1,16 +1,16 @@
 <template>
   <div :class="$style.footer">
     <div v-touch:tap="foote(1)">
-      <van-icon :name="icon1" class="animated" v-bind:class="{bounceIn:isactive1}" />
+      <van-icon :name="icon1" class="animated" v-bind:class="{bounceIn:isactive1,active:isactive1}" />
     </div>
     <div v-touch:tap="foote(2)">
-      <van-icon :name="icon2" class="animated" v-bind:class="{bounceIn:isactive2}" />
+      <van-icon :name="icon2" class="animated" v-bind:class="{bounceIn:isactive2,active:isactive2}" />
     </div>
     <div v-touch:tap="foote(3)">
-      <van-icon :name="icon3" class="animated" v-bind:class="{bounceIn:isactive3}" />
+      <van-icon :name="icon3" class="animated" v-bind:class="{bounceIn:isactive3,active:isactive3}" />
     </div>
     <div v-touch:tap="foote(4)">
-      <van-icon :name="icon4" class="animated" v-bind:class="{bounceIn:isactive4}" />
+      <van-icon :name="icon4" class="animated" v-bind:class="{bounceIn:isactive4,active:isactive4}" />
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
       icon2: "discount",
       icon3: "cart",
       icon4: "contact",
-      isactive1: false,
+      isactive1: true,
       isactive2: false,
       isactive3: false,
       isactive4: false,
@@ -35,36 +35,45 @@ export default {
     foote(i) {
       return () => {
         if (this.timeout) {
-          this["isactive" + i] = true;
+          (this.isactive1 = false),
+            (this.isactive2 = false),
+            (this.isactive3 = false),
+            (this.isactive4 = false),
+            (this["isactive" + i] = true);
           this.timeout = false;
           setTimeout(() => {
-            this["isactive" + i] = false;
-            console.log(i);
             this.timeout = true;
-          }, 400);
-          // if (i == 1) {
-          //   this.$router.replace({
-          //     path: "/"
-          //   });
-          // } else if (i == 2) {
-          //   this.$router.replace({
-          //     path: "/classif"
-          //   });
-          // } else if (i == 3) {
-          //   this.$router.replace({
-          //     path: "/cart"
-          //   });
-          // } else if (i == 4) {
-          //   this.$router.replace({
-          //     path: "/user"
-          //   });
-          // }
+          }, 200);
+          if (i == 1) {
+            this.$router.replace({
+              path: "/"
+            });
+          } else if (i == 2) {
+            this.$router.replace({
+              path: "/classif"
+            });
+          } else if (i == 3) {
+            this.$router.replace({
+              path: "/cart"
+            });
+          } else if (i == 4) {
+            this.$router.replace({
+              path: "/user"
+            });
+          }
         }
       };
     }
   }
 };
 </script>
+
+<style scoped>
+.active {
+  color: #cd312d;
+}
+</style>
+
 
 <style lang="stylus" module>
 .footer {
@@ -80,11 +89,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    i {
-      color: #999;
-      font-size: 24px;
-    }
+    color: #999;
+    font-size: 24px;
   }
+}
+
+.bounceIn {
+  color: red;
 }
 </style>

@@ -2,7 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// 滚动插件
+// cookies
+import Cookie from 'js-cookie'
+// scroll
 import BScroll from 'better-scroll'
 // 动画插件
 import Animate from './assets/css/animate.css'
@@ -14,15 +16,37 @@ import Touch from 'vue-directive-touch'
 import {
   Dialog,
   Toast,
-  Icon
+  Icon,
+  Swipe,
+  SwipeItem
 } from 'vant';
 import 'vant/lib/vant-css/index.css';
 import 'vant/lib/vant-css/icon-local.css';
+
+
+
+
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.Auth) {
+    const user = Cookie.get('user')
+    if (!user) {
+      next('/login')
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
 Vue.config.productionTip = false
 Vue
   .use(Touch)
-  .use(Icon);
+  .use(Icon)
+  .use(Swipe)
+  .use(SwipeItem);
 Vue.prototype.$Bscroll = BScroll
+Vue.prototype.$Cookie = Cookie;
 
 new Vue({
   router,

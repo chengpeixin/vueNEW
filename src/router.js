@@ -4,6 +4,8 @@ import Home from './views/Home/Home.vue'
 import About from './views/About.vue'
 import Is404 from './public/is404.vue'
 import User from './views/user/user.vue'
+import Login from './views/login/login.vue'
+import Cart from './views/cart/cart.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -15,12 +17,31 @@ export default new Router({
     {
       path: '/about/:id',
       name: 'about',
-      component: About
+      component: About,
+      meta: {
+        Auth: true
+      }
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: Cart,
+      meta: {
+        Auth: true
+      }
     },
     {
       path: '/user',
       name: 'user',
-      component: User
+      component: User,
+      meta: {
+        Auth: true
+      }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     },
     {
       path: '*',
