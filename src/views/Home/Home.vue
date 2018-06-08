@@ -10,8 +10,30 @@
       <div></div>
     </div>
     <Conten>
-      <Swiper :datas="swipers" @tap="swiperTap"></Swiper>
-      <Recommend></Recommend>
+      <Swiper>
+        <van-swipe-item v-for="item in swipers" v-touch:tap="bannerEv(item)">
+          <img :src="item.img" style="height:100%;">
+        </van-swipe-item>
+      </Swiper>
+      <Recommend :datas="midel"></Recommend>
+      <Swiper>
+        <van-swipe-item v-for="itema in daymust" :class="$style.shopful">
+          <div v-for="item in itema.datas" :class="$style.shop">
+            <div :class="$style.shoptop">
+              <img :src="item.hotsell" :class="$style.hotsell">
+              <p :class="$style.infotitle">{{item.nameicon}}</p>
+              <img :src="item.img" width="100%">
+            </div>
+            <div :class="$style.shopbottom">
+              <p :class="$style.name">{{item.name}}</p>
+              <p :class="$style.Price">
+                <span :class="$style.Postprice">{{}}</span>
+                <span :class="$style.oriprice"></span>
+              </p>
+            </div>
+          </div>
+        </van-swipe-item>
+      </Swiper>
     </Conten>
     <Footer></Footer>
   </div>
@@ -28,33 +50,23 @@ export default {
   name: "home",
   data() {
     return {
-      swipers: [
-        {
-          img: `https://s11.mogucdn.com/mlcdn/c45406/180402_34178d4id9lakh1bc38f5aja55cj8_750x340.jpg_800x9999.v1c7E.70.webp`,
-          src: "https://www.baidu.com"
-        },
-        {
-          img: `https://s2.mogucdn.com/mlcdn/c45406/180605_2l985e831ik4f4k9biell8d4hc7e9_750x340.jpg_800x9999.v1c7E.70.webp`,
-          src: ""
-        },
-        {
-          img: `https://s2.mogucdn.com/mlcdn/c45406/180605_2k9g5h2k56idldf6c5ci82d4ca3gg_750x340.jpg_800x9999.v1c7E.70.webp`,
-          src: ""
-        },
-        {
-          img: `https://s2.mogucdn.com/mlcdn/c45406/180605_0804hicig66ghlk14dfag430eaidd_750x340.jpg_800x9999.v1c7E.70.webp`,
-          src: ""
-        }
-      ]
+      swipers: [],
+      midel: [],
+      daymust: []
     };
   },
-  created() {
-    console.log(this.$cookies);
+  async created() {
+    const { data } = await this.$http.get("/api/mock");
+    this.swipers = data.data.banner;
+    this.midel = data.data.modle;
+    this.daymust = data.data.daymust;
+    console.log(data);
   },
   methods: {
-    swiperTap(data) {
-      window.open(data.src);
-      console.log(data);
+    bannerEv(data) {
+      return () => {
+        window.open(data.src);
+      };
       // this.$router.push({ path: `about/${100}` });
     }
   },
@@ -109,6 +121,59 @@ export default {
     height: 100%;
     float: left;
     // background: yellow;
+  }
+}
+
+.shopful {
+  display: flex;
+  justify-content: space-around;
+
+  .shop {
+    width: 120px;
+
+    .shoptop {
+      width: 100%;
+      position: relative;
+
+      .hotsell {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+
+      .infotitle {
+        background: linear-gradient(to right, #fe8a42, #ff496c);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        font-size: 12px;
+        color: #fff;
+        padding: 4px;
+        padding-right: 5px;
+        padding-left: 12px;
+        border-radius: 0 6px 0 0;
+      }
+    }
+
+    .shopbottom {
+      .name {
+        color: #000000;
+        font-size: 13px;
+        margin: 5px 0;
+      }
+
+      .Price {
+        .Postprice {
+          color: #ff5777;
+          font-size: 14px;
+        }
+
+        .oriprice {
+        }
+      }
+    }
   }
 }
 </style>

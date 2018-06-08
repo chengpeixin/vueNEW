@@ -1,44 +1,8 @@
 <template>
   <div :class="$style.full">
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
-    </div>
-    <div :class="$style.item">
-      <img src="https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif">
-      <p>0元夺宝</p>
+    <div :class="$style.item" v-for="item in datas">
+      <img :src="item.img">
+      <p>{{item.name}}</p>
     </div>
   </div>
 </template>
@@ -58,7 +22,7 @@ export default {
 
 .item {
   width: 20%;
-  height: 75px;
+  height: 85px;
 
   img {
     display: block;

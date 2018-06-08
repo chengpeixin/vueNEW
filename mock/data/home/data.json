@@ -1,0 +1,152 @@
+{
+  "banner": [{
+      "img": "https://s2.mogucdn.com/mlcdn/c45406/180402_34178d4id9lakh1bc38f5aja55cj8_750x340.jpg_800x9999.v1c7E.70.webp",
+      "src": "https://www.baidu.com"
+    },
+    {
+      "img": "https://s2.mogucdn.com/mlcdn/c45406/180606_74d640674ig5ak4c70j4kai9663j3_750x340.jpg_800x9999.v1c7E.70.webp",
+      "src": ""
+    },
+    {
+      "img": "https://s2.mogucdn.com/mlcdn/c45406/180601_7li99bekak7dk7bfad8akg65fgdh5_750x340.jpg_800x9999.v1c7E.70.webp",
+      "src": ""
+    },
+    {
+      "img": "https://s2.mogucdn.com/mlcdn/c45406/180607_13gd52a7h2667chjk12j2509h4a06_750x340.jpg_800x9999.v1c7E.70.webp",
+      "src": ""
+    }
+  ],
+  "modle": [{
+      "img": "https://s17.mogucdn.com/mlcdn/c45406/171121_63687ac5h16b1cc4gh0g7b2j6ehc1_150x150.gif",
+      "name": "0元夺宝",
+      "src": ""
+    },
+    {
+      "img": "https://s3.mogucdn.com/mlcdn/c45406/180416_774khl2c3b6211ckdjeh3kklh3eka_150x150.png_640x640.v1cAC.50.webp",
+      "name": "限时快抢",
+      "src": ""
+    },
+    {
+      "img": "https://s10.mogucdn.com/mlcdn/c45406/180529_4f4d06fdb76i2d38fgghgd9i280j3_250x250.jpg_640x640.v1cAC.50.webp",
+      "name": "团购立省",
+      "src": ""
+    },
+    {
+      "img": "https://s11.mogucdn.com/mlcdn/c45406/180416_010003d2gb82kk8dhh2225habiagd_250x250.jpg_640x640.v1cAC.50.webp",
+      "name": "省心套装",
+      "src": ""
+    },
+    {
+      "img": "https://s3.mogucdn.com/mlcdn/c45406/171128_520075a1kdfcec662f0d1he68k06l_150x150.png_640x640.v1cAC.50.webp",
+      "name": "签到有礼",
+      "src": ""
+    },
+    {
+      "img": "https://s10.mogucdn.com/mlcdn/c45406/180606_4e3735lc16fchba87k155b86d9ffi_250x250.jpg_640x640.v1cAC.50.webp",
+      "name": "当季热卖",
+      "src": ""
+    },
+    {
+      "img": "https://s17.mogucdn.com/mlcdn/c45406/180412_0ake32331daefi53336kb2bh79kc7_250x250.jpg_640x640.v1cAC.50.webp",
+      "name": "裙装裤装",
+      "src": ""
+    },
+    {
+      "img": "https://s10.mogucdn.com/mlcdn/c45406/180510_5fe8g4k70e47ig0aa7kj9cikccf47_250x250.jpg_640x640.v1cAC.50.webp",
+      "name": "女鞋精选",
+      "src": ""
+    },
+    {
+      "img": "https://s2.mogucdn.com/mlcdn/c45406/170507_31bf7j75b9ffd6iefj18762ekh81b_250x250.jpg_640x640.v1cAC.50.webp",
+      "name": "气质男装",
+      "src": ""
+    },
+    {
+      "img": "https://s10.mogucdn.com/mlcdn/c45406/180607_6ae0716jbgc3ehcb69hjkh0j3lda6_150x150.png_640x640.v1cAC.50.webp",
+      "name": "数码家居",
+      "src": ""
+    }
+  ],
+  "daymust": [{
+      "datas": [{
+          "img": "https://s11.mogucdn.com/mlcdn/1689c6/180605_51i3l07ek290ff7hi0b11b26i7df7_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "买送10片面膜",
+          "current": "¥39.90",
+          "origin": "¥118.00",
+          "nameicon": "美白防晒喷雾",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        },
+        {
+          "img": "https://s17.mogucdn.com/mlcdn/1689c6/180605_61fhl740b0ei5d0d609g18kcl0bke_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "娜丽丝防晒喷雾",
+          "current": "¥33.00",
+          "origin": "¥108.00",
+          "nameicon": "保湿防晒清爽",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        },
+        {
+          "img": "https://s17.mogucdn.com/mlcdn/1689c6/180605_61fhl740b0ei5d0d609g18kcl0bke_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "娜丽丝防晒喷雾",
+          "current": "¥33.00",
+          "origin": "¥108.00",
+          "nameicon": "保湿防晒清爽",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        }
+      ]
+    },
+    {
+      "datas": [{
+          "img": "https://s11.mogucdn.com/mlcdn/1689c6/180605_51i3l07ek290ff7hi0b11b26i7df7_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "买送10片面膜",
+          "current": "¥39.90",
+          "origin": "¥118.00",
+          "nameicon": "美白防晒喷雾",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        },
+        {
+          "img": "https://s17.mogucdn.com/mlcdn/1689c6/180605_61fhl740b0ei5d0d609g18kcl0bke_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "娜丽丝防晒喷雾",
+          "current": "¥33.00",
+          "origin": "¥108.00",
+          "nameicon": "保湿防晒清爽",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        },
+        {
+          "img": "https://s17.mogucdn.com/mlcdn/1689c6/180605_61fhl740b0ei5d0d609g18kcl0bke_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "娜丽丝防晒喷雾",
+          "current": "¥33.00",
+          "origin": "¥108.00",
+          "nameicon": "保湿防晒清爽",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        }
+      ]
+    },
+    {
+      "datas": [{
+          "img": "https://s11.mogucdn.com/mlcdn/1689c6/180605_51i3l07ek290ff7hi0b11b26i7df7_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "买送10片面膜",
+          "current": "¥39.90",
+          "origin": "¥118.00",
+          "nameicon": "美白防晒喷雾",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        },
+        {
+          "img": "https://s17.mogucdn.com/mlcdn/1689c6/180605_61fhl740b0ei5d0d609g18kcl0bke_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "娜丽丝防晒喷雾",
+          "current": "¥33.00",
+          "origin": "¥108.00",
+          "nameicon": "保湿防晒清爽",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        },
+        {
+          "img": "https://s17.mogucdn.com/mlcdn/1689c6/180605_61fhl740b0ei5d0d609g18kcl0bke_450x450.jpg_200x200.v1cAC.70.webp",
+          "name": "娜丽丝防晒喷雾",
+          "current": "¥33.00",
+          "origin": "¥108.00",
+          "nameicon": "保湿防晒清爽",
+          "hotsell": "https://s10.mogucdn.com/mlcdn/c45406/171123_4ai9ha3hbk20bi338gb40361j30af_49x50.png"
+        }
+      ]
+    }
+  ]
+}

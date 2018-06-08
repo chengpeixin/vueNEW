@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 // cookies
 import Cookie from 'js-cookie'
+// ajax
+import Axios from './api/axios.config'
 // scroll
 import BScroll from 'better-scroll'
 // 动画插件
@@ -24,7 +26,7 @@ import 'vant/lib/vant-css/index.css';
 import 'vant/lib/vant-css/icon-local.css';
 
 
-
+require('./../mock/')
 
 
 router.beforeEach((to, from, next) => {
@@ -47,6 +49,7 @@ Vue
   .use(SwipeItem);
 Vue.prototype.$Bscroll = BScroll
 Vue.prototype.$Cookie = Cookie;
+Vue.prototype.$http = Axios;
 
 new Vue({
   router,
