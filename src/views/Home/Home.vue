@@ -16,7 +16,7 @@
         </van-swipe-item>
       </Swiper>
       <Recommend :datas="midel"></Recommend>
-      <Swiper>
+      <Swiper :showIndicators="false">
         <van-swipe-item v-for="itema in daymust" :class="$style.shopful">
           <div v-for="item in itema.datas" :class="$style.shop">
             <div :class="$style.shoptop">
@@ -27,13 +27,15 @@
             <div :class="$style.shopbottom">
               <p :class="$style.name">{{item.name}}</p>
               <p :class="$style.Price">
-                <span :class="$style.Postprice">{{}}</span>
-                <span :class="$style.oriprice"></span>
+                <span :class="$style.Postprice">{{item.current}}</span>
+                <span :class="$style.oriprice">{{item.origin}}</span>
               </p>
             </div>
+            <div :class="$style.gopintuan">去拼团</div>
           </div>
         </van-swipe-item>
       </Swiper>
+      阿三大山大山但是
     </Conten>
     <Footer></Footer>
   </div>
@@ -125,6 +127,7 @@ export default {
 }
 
 .shopful {
+  height: 300px;
   display: flex;
   justify-content: space-around;
 
@@ -168,12 +171,30 @@ export default {
         .Postprice {
           color: #ff5777;
           font-size: 14px;
+          font-weight: 600;
         }
 
         .oriprice {
+          margin-left: 4px;
+          text-decoration: line-through;
+          color: #999999;
+          font-size: 13px;
+          font-weight: 400;
         }
       }
     }
+  }
+
+  .gopintuan {
+    height: 26px;
+    width: 100px;
+    margin: 0 auto;
+    color: #fff;
+    background: #ff5777;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 3px;
   }
 }
 </style>
