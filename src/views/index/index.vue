@@ -1,16 +1,47 @@
 <template>
   <div class="home">
+    <div :class="$style.header">
+      <div>
+        <img src="./../../assets/mgj.png">
+      </div>
+      <div>
+        <input type="text" placeholder="拖鞋">
+      </div>
+      <div></div>
+    </div>
     <Conten>
       <router-view></router-view>
+      <Swiper>
+        <van-swipe-item v-for="item in swipers" v-touch:tap="bannerEv(item)">
+          <img :src="item.img" style="height:100%;">
+        </van-swipe-item>
+      </Swiper>
+      <Recommend :datas="midel"></Recommend>
+      <Swiper :showIndicators="false">
+        <van-swipe-item v-for="itema in daymust" :class="$style.shopful">
+          <div v-for="item in itema.datas" :class="$style.shop">
+            <div :class="$style.shoptop">
+              <img :src="item.hotsell" :class="$style.hotsell">
+              <p :class="$style.infotitle">{{item.nameicon}}</p>
+              <img :src="item.img" width="100%">
+            </div>
+            <div :class="$style.shopbottom">
+              <p :class="$style.name">{{item.name}}</p>
+              <p :class="$style.Price">
+                <span :class="$style.Postprice">{{item.current}}</span>
+                <span :class="$style.oriprice">{{item.origin}}</span>
+              </p>
+            </div>
+            <div :class="$style.gopintuan">去拼团</div>
+          </div>
+        </van-swipe-item>
+      </Swiper>
     </Conten>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Heade from "@/public/heade";
-import Footer from "@/public/foote";
 import Conten from "@/public/conten";
 import Swiper from "@/components/swiper";
 import Recommend from "@/components/recomm";
@@ -28,17 +59,15 @@ export default {
     this.swipers = data.data.banner;
     this.midel = data.data.modle;
     this.daymust = data.data.daymust;
-    console.log(data);
   },
   methods: {
     bannerEv(data) {
       return () => {
         window.open(data.src);
       };
-      // this.$router.push({ path: `about/${100}` });
     }
   },
-  components: { Heade, Footer, Conten, Swiper, Recommend }
+  components: { Conten, Swiper, Recommend }
 };
 </script>
 

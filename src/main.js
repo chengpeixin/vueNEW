@@ -20,7 +20,8 @@ import {
   Toast,
   Icon,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Popup
 } from 'vant';
 import 'vant/lib/vant-css/index.css';
 import 'vant/lib/vant-css/icon-local.css';
@@ -46,6 +47,7 @@ Vue
   .use(Touch)
   .use(Icon)
   .use(Swipe)
+  .use(Popup)
   .use(SwipeItem);
 Vue.prototype.$Bscroll = BScroll
 Vue.prototype.$Cookie = Cookie;

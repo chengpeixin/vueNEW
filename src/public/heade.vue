@@ -21,6 +21,9 @@ export default {
       default: "",
       type: String
     },
+    interruptback: {
+      default: false
+    },
     icon: {
       default: true,
       type: Boolean
@@ -32,6 +35,9 @@ export default {
   },
   methods: {
     async lefttop() {
+      if (this.interruptback) {
+        this.$emit("backfun");
+      }
       if (this.left == "") return;
       history.back();
       console.log(1);

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home/Home.vue'
+import Index from './views/index/index.vue'
 import About from './views/About.vue'
 import Is404 from './public/is404.vue'
 import User from './views/user/user.vue'
@@ -12,37 +13,43 @@ export default new Router({
   routes: [{
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      children: [{
+          path: '/',
+          name: 'index',
+          component: Index
+        }, {
+          path: '/about/:id',
+          name: 'about',
+          component: About,
+          meta: {
+            Auth: true
+          }
+        },
+        {
+          path: '/cart',
+          name: 'cart',
+          component: Cart,
+          meta: {
+            Auth: true
+          }
+        },
+        {
+          path: '/user',
+          name: 'user',
+          component: User,
+          meta: {
+            Auth: true
+          }
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: Login
+        }
+      ]
     },
-    {
-      path: '/about/:id',
-      name: 'about',
-      component: About,
-      meta: {
-        Auth: true
-      }
-    },
-    {
-      path: '/cart',
-      name: 'cart',
-      component: Cart,
-      meta: {
-        Auth: true
-      }
-    },
-    {
-      path: '/user',
-      name: 'user',
-      component: User,
-      meta: {
-        Auth: true
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
-    },
+
     {
       path: '*',
       name: 'is404',

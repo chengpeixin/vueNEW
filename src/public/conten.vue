@@ -22,7 +22,7 @@ export default {
 
 <style lang="stylus" module>
 .wrapper {
-  height: 571px;
+  height: 616px;
   overflow: hidden;
   box-sizing: border-box;
 }
